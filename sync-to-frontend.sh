@@ -26,7 +26,7 @@ if [ ! -d "$SRC/../catalog-beer/.git" ]; then
 fi
 
 mkdir -p "$DEST"
-rsync -a --delete --out-format='%n' "$SRC/catalog-beer/" "$DEST/"
+rsync -a --delete --exclude '.DS_Store' --out-format='%n' "$SRC/catalog-beer/" "$DEST/"
 
 echo "Mirrored catalog-beer/ → $DEST"
 echo "Next: commit the catalog-beer repo and run its ./deploy.sh"
