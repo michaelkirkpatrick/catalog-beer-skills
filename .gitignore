@@ -1,1 +1,6 @@
 .DS_Store
+
+# Build artifact. The zip that humans download is generated into the FRONTEND
+# repo by sync-to-frontend.sh and committed there; one built here would be a
+# second copy free to drift. Ignored so a stray local build can't ship.
+catalog-beer.zip

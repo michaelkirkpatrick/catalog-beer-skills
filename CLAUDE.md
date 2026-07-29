@@ -17,6 +17,24 @@ catalog.beer/llms.txt). After ANY change to `catalog-beer/`:
 Never edit `../catalog-beer/skills/` directly — the sync's `--delete`
 discards such edits.
 
+## Versioning
+
+`SKILL.md` frontmatter carries `metadata.version` and `metadata.updated`.
+`updated` is stamped automatically by `sync-to-frontend.sh` from the last
+commit touching `catalog-beer/` — never edit it by hand.
+
+`version` is [semver](https://semver.org) and is bumped **by hand**, because
+the question it answers is a judgement call: *would an agent following the old
+copy now be wrong?* Zip-installed copies never auto-update, so this number is
+how someone decides whether to re-download.
+
+- **MAJOR** — the old copy now produces wrong behavior: an auth or endpoint
+  contract changed, a documented field was removed or renamed, a reference
+  file it points at is gone.
+- **MINOR** — new ground covered, old copy still correct: a new endpoint, a
+  new reference file, added guidance.
+- **PATCH** — same behavior, better wording: clarifications, typos, examples.
+
 ## Content rules (learned from live agent testing)
 
 - `references/*.md` must stay faithful to the API docs
