@@ -9,7 +9,7 @@ description: >-
   guidelines).
 license: MIT
 metadata:
-  version: "1.3.0"
+  version: "1.4.0"
   updated: "2026-07-28"
 ---
 
