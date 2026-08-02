@@ -4,3 +4,8 @@
 # repo by sync-to-frontend.sh and committed there; one built here would be a
 # second copy free to drift. Ignored so a stray local build can't ship.
 catalog-beer.zip
+
+# Local working files for one-off catalog surgery — database dumps, sqlite
+# copies, dedupe manifests, ad-hoc scripts. This repo is PUBLIC and published to
+# catalog.beer/skills/, so nothing here should ever reach a commit.
+scratch/
