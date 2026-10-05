@@ -7,10 +7,10 @@ Agent Skills that teach AI coding agents to use the Catalog.beer REST API. The s
 This repo is the canonical source, but the skill is *served* from https://catalog.beer/skills/catalog-beer/SKILL.md (linked from catalog.beer/llms.txt). After ANY change to `catalog-beer/`:
 
 1. Commit + push this repo
-2. Run `./sync-to-frontend.sh` (rsyncs into `../catalog-beer/skills/`)
+2. Run `./sync-to-frontend.sh` (rsyncs into `../catalog-beer/public_html/skills/`)
 3. Commit the `catalog-beer` frontend repo and deploy it (`./deploy.sh` — Michael runs deploys himself)
 
-Never edit `../catalog-beer/skills/` directly — the sync's `--delete` discards such edits.
+Never edit `../catalog-beer/public_html/skills/` directly — the sync's `--delete` discards such edits.
 
 ## Writing Markdown (every `.md` in this repo)
 

@@ -12,13 +12,13 @@
 #   2. Run this script
 #   3. Commit the catalog-beer frontend repo and run its ./deploy.sh
 #
-# Never edit catalog-beer/skills/ in the frontend repo directly — this
+# Never edit catalog-beer/public_html/skills/ in the frontend repo directly — this
 # script's --delete will discard those edits on the next sync.
 # ============================================================================
 set -euo pipefail
 
 SRC="$(cd "$(dirname "$0")" && pwd)"
-DEST="$SRC/../catalog-beer/skills/catalog-beer"
+DEST="$SRC/../catalog-beer/public_html/skills/catalog-beer"
 
 if [ ! -d "$SRC/../catalog-beer/.git" ]; then
 	echo "Error: catalog-beer frontend repo not found next to this repo." >&2
