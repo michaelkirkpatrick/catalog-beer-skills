@@ -156,7 +156,7 @@ When a write fails with `valid_msg.url` set (the message says "something seems t
 | Styles | `GET /style` (all, with `version`) · `/style/parent` (families) · `/style/class` |
 | My usage / billing status | `GET /usage/my-usage` · `GET /billing` (never blocked by the usage limit, not counted) |
 
-All entity IDs are 36-char UUIDs; style IDs are slugs. List endpoints use cursor pagination: pass `next_cursor` back as `cursor`; `next_cursor` is only present when `has_more` is true.
+All entity IDs are 36-char UUIDs; style IDs are slugs. List endpoints use cursor pagination: pass `next_cursor` back as `cursor`; `next_cursor` is only present when `has_more` is true. One exception: `GET /brewer/{brewer_id}/beer` has no cursor. Its `count` caps the list, and `has_more: true` there means the list was cut, not that a next page exists; leave `count` off, or filter by `parent`, to get every row.
 
 ## Common mistakes
 
